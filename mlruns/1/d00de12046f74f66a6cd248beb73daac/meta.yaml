@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/guehojang/code/Gueho/TaxiFareModel/TaxiFareChallenge/mlruns/1/d00de12046f74f66a6cd248beb73daac/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: d00de12046f74f66a6cd248beb73daac
+run_uuid: d00de12046f74f66a6cd248beb73daac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1645537411908
+status: 1
+tags: []
+user_id: unknown

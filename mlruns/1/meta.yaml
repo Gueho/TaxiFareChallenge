@@ -1,0 +1,4 @@
+artifact_location: file:///Users/guehojang/code/Gueho/TaxiFareModel/TaxiFareChallenge/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: test_experiment
