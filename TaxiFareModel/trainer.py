@@ -16,9 +16,11 @@ from sklearn.model_selection import train_test_split
 import mlflow
 from mlflow.tracking import MlflowClient
 from memoized_property import memoized_property
+import joblib
+
 
 MLFLOW_URI = "https://mlflow.lewagon.co/"
-EXPERIMENT_NAME = "[DE] BER gueho taxichallenge v1"
+EXPERIMENT_NAME = "[DE] BER gueho taxichallenge v2"
 # rmse = make_scorer(compute_rmse, greater_is_better=False)
 
 class Trainer():
@@ -89,6 +91,10 @@ class Trainer():
     def mlflow_log_metric(self, key, value):
         self.mlflow_client.log_metric(self.mlflow_run.info.run_id, key, value)
 
+    def save_model(self):
+        """ Save the trained model into a model.joblib file """
+        self.run()
+        joblib.dump(self.pipeline, 'model.joblib')
 
 
 if __name__ == "__main__":
@@ -105,3 +111,4 @@ if __name__ == "__main__":
     # evaluate
     rmse = model.evaluate()
     print(rmse)
+    model.save_model()
